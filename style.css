@@ -1,36 +1,13 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #3a7bd5, #00d2ff);
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
   text-align: center;
-  color: white;
-}
-
-.top-bar {
-  background: #222;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  background: red;
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-weight: bold;
-  display: flex;
-  gap: 5px;
-}
-
-.logo span {
-  background: black;
-  padding: 4px 6px;
-  border-radius: 4px;
 }
 
 h1 {
+  color: white;
   margin: 20px 0;
-  font-size: 48px;
 }
 
 .game {
@@ -44,7 +21,8 @@ h1 {
 }
 
 .card {
-  height: 110px;
+  position: relative;
+  height: 100px;
   transform-style: preserve-3d;
   transition: transform 0.6s;
   cursor: pointer;
@@ -65,6 +43,7 @@ h1 {
   justify-content: center;
   font-size: 32px;
   font-weight: bold;
+  color: white;
 }
 
 .front {
@@ -79,4 +58,29 @@ h1 {
 .back img {
   width: 80%;
   height: 80%;
+  object-fit: contain;
 }
+
+#me {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 12px;
+  color: white;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  letter-spacing: 2px;
+  display: inline-block;
+  animation: glow 2s infinite alternate;
+}
+
+/* أنيميشن توهج */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #ff512f, 0 0 10px #dd2476;
+  }
+  to {
+    box-shadow: 0 0 15px #ff512f, 0 0 30px #dd2476;
+  }
+}
+
